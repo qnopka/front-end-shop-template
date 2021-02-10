@@ -1,0 +1,48 @@
+.navbar {
+  margin-right: -$gap;
+  margin-left: -$gap;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  white-space: nowrap;
+
+  color: $color-dark;
+
+  font-size: 1.2rem;
+}
+
+.navbar-nav {
+  @media (min-width: 992px) {
+    width: calc(100% - 300px);
+    padding-right: $gap * 2;
+    padding-left: 70px;
+
+    > .nav-item {
+      flex-grow: 1;
+
+      text-align: center;
+
+      :not(.show) {
+        border-left: 1px solid $color-dark;
+      }
+
+      &:last-child {
+        border-right: 1px solid $color-dark;
+      }
+    }
+  }
+}
+
+.btn-outline-success {
+  color: $color-dark;
+  border-color: $color-dark;
+  border-radius: 0;
+
+  &:hover {
+    color: $color-light;
+    border-color: $color-dark;
+    background-color: $color-dark;
+  }
+}

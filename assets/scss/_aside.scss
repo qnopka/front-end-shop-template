@@ -1,0 +1,74 @@
+.filter-section {
+  padding: $gap ($gap * 2) ($gap * 2);
+
+  color: $color-light;
+
+  @media (min-width: 992px) {
+    border-right: 1px solid $color-light;
+    background-color: rgba($color-light, 0.25);
+  }
+
+  @media (max-width: 991px) {
+    border-top: 1px solid $color-light;
+  }
+
+  &__title {
+    padding-bottom: 8px;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .form-check {
+    margin: 10px 0;
+
+    &-label {
+      margin-left: 0.5rem;
+
+      font-size: 1.25rem;
+    }
+
+    &-input {
+      width: 0;
+      height: 0;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:checked {
+        &::before {
+          background-color: $color-light;
+        }
+      }
+
+      &::before {
+        display: block;
+
+        width: 0.8rem;
+        height: 0.8rem;
+        margin-top: 0.35rem;
+
+        content: "";
+
+        border: 1px solid $color-light;
+      }
+    }
+  }
+
+  &__more {
+    display: block;
+
+    margin-bottom: $gap * 2;
+
+    color: $color-light;
+
+    font-size: 1.25rem;
+  }
+
+  &__submit {
+    border: 1px solid $color-light;
+    border-radius: 0;
+    background-color: $color-dark;
+  }
+}
